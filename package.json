@@ -3,15 +3,17 @@
   "version": "0.0.1",
   "description": "Functions for using BEM in CSS.",
   "main": "dist/index.js",
+  "files": [
+    "dist"
+  ],
   "scripts": {
-    "build": "yarn build:clean && yarn build:js",
-    "build:clean": "yarn rimraf dist",
-    "build:js": "yarn babel src --out-dir dist --ignore test.js",
+    "build": "rimraf dist && yarn build:js",
+    "build:js": "babel src --out-dir dist --ignore test.js",
     "test": "yarn test:lint && yarn test:unit",
-    "test:lint": "yarn eslint ./src/**/*.js",
-    "test:unit": "yarn jest",
-    "prepublishOnly": "yarn build",
-    "release": "yarn np"
+    "test:lint": "eslint ./src/**/*.js",
+    "test:unit": "jest",
+    "prepublishOnly": "yarn test && yarn run build",
+    "postpublish": "git push --follow-tags"
   },
   "author": "Jahed Ahmed",
   "license": "MIT",
