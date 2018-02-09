@@ -1,7 +1,7 @@
 import generateClassNames from './generateClassNames'
 import join from './join'
 
-function bemStyles (styles) {
+function bemModule (styles) {
   return (elementName, modifiers) => (
     join(
       generateClassNames(elementName, modifiers)
@@ -10,4 +10,4 @@ function bemStyles (styles) {
   )
 }
 
-export default bemStyles
+export default bemModule

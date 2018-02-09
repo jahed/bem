@@ -1,4 +1,4 @@
-import bemStyles from './bemStyles'
+import bemModule from './bemModule'
 
 test('should apply modifiers to element name and use style object', () => {
   const styles = {
@@ -8,7 +8,7 @@ test('should apply modifiers to element name and use style object', () => {
     'Element--string--value': 'Element--string--value#hash'
   }
 
-  const bem = bemStyles(styles)
+  const bem = bemModule(styles)
 
   const result = bem('Element', {
     falseBoolean: false,
@@ -33,7 +33,7 @@ test('should not include block if it does not exist', () => {
     'Element--boolean': 'Element--boolean#hash'
   }
 
-  const bem = bemStyles(styles)
+  const bem = bemModule(styles)
 
   const result = bem('Element', {
     boolean: true
