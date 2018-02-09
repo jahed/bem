@@ -1,0 +1,33 @@
+{
+  "name": "bem",
+  "version": "0.0.1",
+  "description": "Functions for using BEM in CSS.",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "rimraf dist && build:js",
+    "build:js": "babel src --out-dir dist --ignore test.js",
+    "test": "yarn test:lint && yarn test:unit",
+    "test:lint": "eslint ./src/**/*.js",
+    "test:unit": "jest",
+    "prepublishOnly": "yarn build",
+    "release": "np"
+  },
+  "author": "Jahed Ahmed",
+  "license": "MIT",
+  "devDependencies": {
+    "babel-cli": "6.26.0",
+    "babel-core": "6.26.0",
+    "babel-eslint": "8.2.1",
+    "babel-preset-env": "1.6.1",
+    "babel-preset-stage-3": "6.24.1",
+    "eslint": "4.15.0",
+    "eslint-config-standard": "^11.0.0-beta.0",
+    "eslint-plugin-import": "^2.8.0",
+    "eslint-plugin-node": "^6.0.0",
+    "eslint-plugin-promise": "^3.6.0",
+    "eslint-plugin-standard": "^3.0.1",
+    "jest": "21.2.1",
+    "np": "^2.19.0",
+    "rimraf": "2.6.2"
+  }
+}
