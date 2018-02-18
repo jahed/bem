@@ -41,3 +41,13 @@ test('should not include block if it does not exist', () => {
 
   expect(result).toEqual('Element--boolean#hash')
 })
+
+test('should default to empty object for convenience', () => {
+  const bem = bemModule()
+
+  const result = bem('Element', {
+    boolean: true
+  })
+
+  expect(result).toEqual('')
+})
