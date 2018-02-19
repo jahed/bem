@@ -6,8 +6,8 @@
 
 Functions for using BEM in CSS.
 
-- [Using CSS Modules with BEM](https://medium.com/@jahed/using-css-modules-with-bem-9a5f41ee592e)
-- [@jahed/bem, A Brief History](https://medium.com/@jahed/jahed-bem-a-brief-history-94e370d29a12)
+- [Using CSS Modules with BEM](https://jahed.io/2018/02/09/using-css-modules-with-bem/)
+- [@jahed/bem, A Brief History](https://jahed.io/2018/02/09/jahed-bem-a-brief-history/)
 
 ## Usage
 
