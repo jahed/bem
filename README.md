@@ -1,7 +1,7 @@
 # @jahed/bem
 
-[![Travis](https://img.shields.io/travis/jahed/bem.svg)](https://travis-ci.org/search/bem)
-[![npm](https://img.shields.io/npm/v/@jahed/bem.svg)](https://www.npmjs.com/package/bem)
+[![Travis](https://img.shields.io/travis/jahed/bem.svg)](https://travis-ci.org/jahed/bem)
+[![npm](https://img.shields.io/npm/v/@jahed/bem.svg)](https://www.npmjs.com/package/@jahed/bem)
 [![Patreon](https://img.shields.io/badge/patreon-donate-f96854.svg)](https://www.patreon.com/jahed)
 
 Functions for using BEM in CSS.
