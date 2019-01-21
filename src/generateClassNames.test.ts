@@ -1,7 +1,7 @@
-import bem from './bem'
+import { generateClassNames } from './generateClassNames'
 
 test('should apply modifiers to element name', () => {
-  const result = bem('Element', {
+  const result = generateClassNames('Element', {
     falseBoolean: false,
     undefinedValue: undefined,
     nullValue: null,
@@ -10,7 +10,7 @@ test('should apply modifiers to element name', () => {
     string: 'value'
   })
 
-  expect(result.split(' ')).toEqual([
+  expect(result).toEqual([
     'Element',
     'Element--boolean',
     'Element--number--1',

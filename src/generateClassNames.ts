@@ -1,4 +1,4 @@
-function generateClassNames (elementName, modifiers = {}) {
+const generateClassNames = (elementName: string, modifiers: Modifiers = {}) => {
   const classes = Object.keys(modifiers)
     .filter(key => !!modifiers[key])
     .map(modifierType => {
@@ -11,4 +11,6 @@ function generateClassNames (elementName, modifiers = {}) {
   return classes
 }
 
-export default generateClassNames
+export {
+  generateClassNames
+}

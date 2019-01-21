@@ -1,4 +1,4 @@
-import bemModule from './bemModule'
+import { bemModule } from './bemModule'
 
 test('should apply modifiers to element name and use style object', () => {
   const styles = {
