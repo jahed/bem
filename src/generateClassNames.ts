@@ -1,4 +1,9 @@
-const generateClassNames = (elementName: string, modifiers: Modifiers = {}) => {
+import { ClassName, Modifiers } from './types'
+
+const generateClassNames = (
+  elementName: ClassName,
+  modifiers: Modifiers = {}
+): ClassName[] => {
   const classes = Object.keys(modifiers)
     .filter(key => !!modifiers[key])
     .map(modifierType => {
