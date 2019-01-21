@@ -20,10 +20,10 @@
     "build:lib": "rimraf lib && tsc",
     "build:es": "rimraf es && tsc --outDir ./es/ --target es6 --module es6",
     "build:docs": "rimraf docs && typedoc --theme default --out docs --mode file",
-    "push:git": "git push && git push --tags",
+    "push:git": "git push --follow-tags",
     "push:docs": "bash -i ./publish-docs.sh",
-    "prepublishOnly": "yarn lint && yarn test && yarn build:lib && yarn build:es && yarn build:docs",
-    "postpublish": "yarn push:git && yarn push:docs"
+    "prepare": "yarn lint && yarn test && yarn build:lib && yarn build:es && yarn build:docs",
+    "deploy": "yarn prepare && yarn publish && yarn push:git && yarn push:docs"
   },
   "devDependencies": {
     "@types/jest": "23.3.13",
