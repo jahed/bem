@@ -1,6 +1,6 @@
 {
   "name": "@jahed/bem",
-  "version": "1.2.3",
+  "version": "1.2.4",
   "description": "Functions for using BEM in CSS.",
   "main": "lib/index.js",
   "module": "es/index.js",
