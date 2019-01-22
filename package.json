@@ -35,5 +35,15 @@
     "tslint-config-standard": "8.0.1",
     "typedoc": "0.14.2",
     "typescript": "3.2.4"
-  }
+  },
+  "keywords": [
+    "bem",
+    "css",
+    "class",
+    "classnames",
+    "utils",
+    "utilities",
+    "generator",
+    "modules"
+  ]
 }
