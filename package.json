@@ -23,7 +23,8 @@
     "push:git": "git push --follow-tags",
     "push:docs": "bash -i ./publish-docs.sh",
     "ready": "yarn lint && yarn test && yarn build:lib && yarn build:es && yarn build:docs",
-    "deploy": "yarn ready && yarn publish && yarn push:git && yarn push:docs"
+    "deploy": "yarn ready && yarn publish && yarn push:git && yarn push:docs",
+    "deps": "yarn upgrade-interactive --latest && yarn upgrade && git add yarn.lock '*package.json' && git commit -m 'build(deps): upgrade dependencies'"
   },
   "devDependencies": {
     "@types/jest": "23.3.13",
