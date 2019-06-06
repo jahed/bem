@@ -23,18 +23,19 @@
     "push:git": "git push --follow-tags",
     "push:docs": "bash -i ./publish-docs.sh",
     "prepare": "yarn lint && yarn test && yarn build:lib && yarn build:es && yarn build:docs",
-    "deploy": "yarn prepare && yarn publish && yarn push:git && yarn push:docs"
+    "deploy": "yarn prepare && yarn publish && yarn push:git && yarn push:docs",
+    "deps": "yarn upgrade-interactive --latest && yarn upgrade && git add yarn.lock '*package.json' && git commit -m 'build(deps): upgrade dependencies'"
   },
   "devDependencies": {
-    "@types/jest": "23.3.13",
-    "@types/node": "10.12.18",
-    "jest": "23.6.0",
+    "@types/jest": "24.0.13",
+    "@types/node": "12.0.5",
+    "jest": "24.8.0",
     "rimraf": "2.6.3",
-    "ts-jest": "23.10.5",
-    "tslint": "5.12.1",
+    "ts-jest": "24.0.2",
+    "tslint": "5.17.0",
     "tslint-config-standard": "8.0.1",
     "typedoc": "0.14.2",
-    "typescript": "3.2.4"
+    "typescript": "3.5.1"
   },
   "keywords": [
     "bem",
