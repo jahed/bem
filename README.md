@@ -5,7 +5,7 @@
 [![Patreon](https://img.shields.io/badge/patreon-donate-f96854.svg)](https://www.patreon.com/jahed)
 [![Liberapay](https://img.shields.io/badge/liberapay-donate-d9b113.svg)](https://liberapay.com/jahed)
 
-Functions for using BEM in CSS.
+Functions for using BEM in CSS and CSS Modules.
 
 - [Using CSS Modules with BEM](https://jahed.dev/2018/02/09/using-css-modules-with-bem/)
 - [@jahed/bem, A Brief History](https://jahed.dev/2018/02/09/jahed-bem-a-brief-history/)
@@ -44,7 +44,7 @@ For complete API documentation, [see the documentation website](https://jahed.gi
 
 Generates BEM-compliant class names for the given `block` (or `element`) with modifiers.
 
-[Examples](src/bemModule.test.js)
+[Examples](src/bemModule.test.ts)
 
 ---
 
@@ -53,7 +53,7 @@ Generates BEM-compliant class names for the given `block` (or `element`) with mo
 Generates a `bem`-compliant function which maps the resulting class names to the given
 `cssModuleLocals` map.
 
-[Examples](src/bemModule.test.js)
+[Examples](src/bemModule.test.ts)
 
 ---
 
@@ -62,7 +62,7 @@ Generates a `bem`-compliant function which maps the resulting class names to the
 Joins the given `string`s with a whitespace (` `), filtering any falsy
 values (such as `undefined`, `null`, `false`, `''`).
 
-[Examples](src/join.test.js)
+[Examples](src/join.test.ts)
 
 ---
 
