@@ -9,5 +9,5 @@ test('joins array of classNames with whitespace', () => {
 })
 
 test('ignores falsy values', () => {
-  expect(join(['A', 'B', undefined, 'C', 'D', 'E'])).toEqual('A B C D E')
+  expect(join(['A', 'B', undefined, 'C', false, 'D', null, 'E'])).toEqual('A B C D E')
 })
