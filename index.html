@@ -1,0 +1,180 @@
+<!doctype html>
+<html class="default no-js">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>@jahed/bem</title>
+	<meta name="description" content="Documentation for @jahed/bem">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="assets/css/main.css">
+</head>
+<body>
+<header>
+	<div class="tsd-page-toolbar">
+		<div class="container">
+			<div class="table-wrap">
+				<div class="table-cell" id="tsd-search" data-index="assets/js/search.json" data-base=".">
+					<div class="field">
+						<label for="tsd-search-field" class="tsd-widget search no-caption">Search</label>
+						<input id="tsd-search-field" type="text" />
+					</div>
+					<ul class="results">
+						<li class="state loading">Preparing search index...</li>
+						<li class="state failure">The search index is not available</li>
+					</ul>
+					<a href="index.html" class="title">@jahed/bem</a>
+				</div>
+				<div class="table-cell" id="tsd-widgets">
+					<div id="tsd-filter">
+						<a href="#" class="tsd-widget options no-caption" data-toggle="options">Options</a>
+						<div class="tsd-filter-group">
+							<div class="tsd-select" id="tsd-filter-visibility">
+								<span class="tsd-select-label">All</span>
+								<ul class="tsd-select-list">
+									<li data-value="public">Public</li>
+									<li data-value="protected">Public/Protected</li>
+									<li data-value="private" class="selected">All</li>
+								</ul>
+							</div>
+							<input type="checkbox" id="tsd-filter-inherited" checked />
+							<label class="tsd-widget" for="tsd-filter-inherited">Inherited</label>
+							<input type="checkbox" id="tsd-filter-externals" checked />
+							<label class="tsd-widget" for="tsd-filter-externals">Externals</label>
+							<input type="checkbox" id="tsd-filter-only-exported" />
+							<label class="tsd-widget" for="tsd-filter-only-exported">Only exported</label>
+						</div>
+					</div>
+					<a href="#" class="tsd-widget menu no-caption" data-toggle="menu">Menu</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="tsd-page-title">
+		<div class="container">
+			<ul class="tsd-breadcrumb">
+				<li>
+					<a href="globals.html">Globals</a>
+				</li>
+			</ul>
+			<h1>@jahed/bem</h1>
+		</div>
+	</div>
+</header>
+<div class="container container-main">
+	<div class="row">
+		<div class="col-8 col-content">
+			<div class="tsd-panel tsd-typography">
+				<a href="#jahedbem" id="jahedbem" style="color: inherit; text-decoration: none;">
+					<h1>@jahed/bem</h1>
+				</a>
+				<p><a href="https://travis-ci.org/jahed/bem"><img src="https://img.shields.io/travis/jahed/bem.svg" alt="Travis"></a>
+					<a href="https://www.npmjs.com/package/@jahed/bem"><img src="https://img.shields.io/npm/v/@jahed/bem.svg" alt="npm"></a>
+					<a href="https://www.patreon.com/jahed"><img src="https://img.shields.io/badge/patreon-donate-f96854.svg" alt="Patreon"></a>
+				<a href="https://liberapay.com/jahed"><img src="https://img.shields.io/badge/liberapay-donate-d9b113.svg" alt="Liberapay"></a></p>
+				<p>Functions for using BEM in CSS and CSS Modules.</p>
+				<ul>
+					<li><a href="https://jahed.dev/2018/02/09/using-css-modules-with-bem/">Using CSS Modules with BEM</a></li>
+					<li><a href="https://jahed.dev/2018/02/09/jahed-bem-a-brief-history/">@jahed/bem, A Brief History</a></li>
+				</ul>
+				<a href="#installation" id="installation" style="color: inherit; text-decoration: none;">
+					<h2>Installation</h2>
+				</a>
+				<pre><code class="language-bash"><span class="hljs-comment"># NPM</span>
+npm install @jahed/bem
+
+<span class="hljs-comment"># Yarn</span>
+yarn add @jahed/bem</code></pre>
+				<a href="#usage" id="usage" style="color: inherit; text-decoration: none;">
+					<h2>Usage</h2>
+				</a>
+				<pre><code class="language-js"><span class="hljs-keyword">import</span> { bem } <span class="hljs-keyword">from</span> <span class="hljs-string">'@jahed/bem'</span>
+
+<span class="hljs-keyword">const</span> className = <span class="hljs-string">".MyElement .MyElement--color--red .MyElement--active"</span>
+<span class="hljs-comment">// same as</span>
+<span class="hljs-keyword">const</span> className = bem(<span class="hljs-string">'MyElement'</span>, {
+  <span class="hljs-attr">color</span>: <span class="hljs-string">'red'</span>,
+  <span class="hljs-attr">active</span>: <span class="hljs-literal">true</span>,
+  <span class="hljs-attr">disabled</span>: <span class="hljs-literal">false</span>
+})</code></pre>
+				<p>For more thorough examples, see the tests and blog posts linked above.</p>
+				<a href="#api" id="api" style="color: inherit; text-decoration: none;">
+					<h2>API</h2>
+				</a>
+				<p>For complete API documentation, <a href="https://jahed.github.io/bem/">see the documentation website</a>.</p>
+				<p><strong><code>bem(block: string, modifiers: object&lt;string, (boolean|number|string)?&gt;): string</code></strong></p>
+				<p>Generates BEM-compliant class names for the given <code>block</code> (or <code>element</code>) with modifiers.</p>
+				<p><a href="src/bemModule.test.ts">Examples</a></p>
+				<hr>
+				<p><strong><code>bemModule(cssModuleLocals): bem</code></strong></p>
+				<p>Generates a <code>bem</code>-compliant function which maps the resulting class names to the given
+				<code>cssModuleLocals</code> map.</p>
+				<p><a href="src/bemModule.test.ts">Examples</a></p>
+				<hr>
+				<p><strong><code>join(...string): string</code></strong></p>
+				<p>Joins the given <code>string</code>s with a whitespace (<code></code>), filtering any falsy
+				values (such as <code>undefined</code>, <code>null</code>, <code>false</code>, <code>&#39;&#39;</code>).</p>
+				<p><a href="src/join.test.ts">Examples</a></p>
+				<hr>
+				<a href="#license" id="license" style="color: inherit; text-decoration: none;">
+					<h2>License</h2>
+				</a>
+				<p><a href="LICENSE">MIT</a></p>
+			</div>
+		</div>
+		<div class="col-4 col-menu menu-sticky-wrap menu-highlight">
+			<nav class="tsd-navigation primary">
+				<ul>
+					<li class="globals  ">
+						<a href="globals.html"><em>Globals</em></a>
+					</li>
+				</ul>
+			</nav>
+			<nav class="tsd-navigation secondary menu-sticky">
+				<ul class="before-current">
+					<li class=" tsd-kind-type-alias tsd-has-type-parameter">
+						<a href="globals.html#arrayorvarargs" class="tsd-kind-icon">Array<wbr>OrVar<wbr>Args</a>
+					</li>
+					<li class=" tsd-kind-type-alias">
+						<a href="globals.html#bem" class="tsd-kind-icon">BEM</a>
+					</li>
+					<li class=" tsd-kind-type-alias">
+						<a href="globals.html#cssmodule" class="tsd-kind-icon">CSSModule</a>
+					</li>
+					<li class=" tsd-kind-type-alias">
+						<a href="globals.html#classname" class="tsd-kind-icon">Class<wbr>Name</a>
+					</li>
+					<li class=" tsd-kind-type-alias">
+						<a href="globals.html#modifiers" class="tsd-kind-icon">Modifiers</a>
+					</li>
+					<li class=" tsd-kind-function">
+						<a href="globals.html#bem" class="tsd-kind-icon">bem</a>
+					</li>
+					<li class=" tsd-kind-function">
+						<a href="globals.html#bemmodule" class="tsd-kind-icon">bem<wbr>Module</a>
+					</li>
+					<li class=" tsd-kind-function">
+						<a href="globals.html#generateclassnames" class="tsd-kind-icon">generate<wbr>Class<wbr>Names</a>
+					</li>
+					<li class=" tsd-kind-function">
+						<a href="globals.html#join" class="tsd-kind-icon">join</a>
+					</li>
+				</ul>
+			</nav>
+		</div>
+	</div>
+</div>
+<footer class="with-border-bottom">
+	<div class="container">
+		<h2>Legend</h2>
+		<div class="tsd-legend-group">
+		</div>
+	</div>
+</footer>
+<div class="container tsd-generator">
+	<p>Generated using <a href="https://typedoc.org/" target="_blank">TypeDoc</a></p>
+</div>
+<div class="overlay"></div>
+<script src="assets/js/main.js"></script>
+<script>if (location.protocol == 'file:') document.write('<script src="assets/js/search.js"><' + '/script>');</script>
+</body>
+</html>
