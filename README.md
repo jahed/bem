@@ -25,13 +25,34 @@ yarn add @jahed/bem
 ```js
 import { bem } from '@jahed/bem'
 
-const className = ".MyElement .MyElement--color--red .MyElement--active"
-// same as
 const className = bem('MyElement', {
   color: 'red',
   active: true,
   disabled: false
 })
+
+console.log(className)
+// .MyElement .MyElement--color--red .MyElement--active
+```
+
+### CSS Modules
+
+The example below assumes you've configured CSS Modules to render classes with a `-hash` suffix.
+
+```js
+import { bemModule } from '@jahed/bem'
+import styles from 'styles.module.css'
+
+cont bem = bemModule(styles)
+
+const className = bem('MyElement', {
+  color: 'red',
+  active: true,
+  disabled: false
+})
+
+console.log(className)
+// .MyElement-hash .MyElement-hash--color--red .MyElement-hash--active
 ```
 
 For more thorough examples, see the tests and blog posts linked above.
