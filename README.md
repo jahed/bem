@@ -41,7 +41,7 @@ The example below assumes you've configured CSS Modules to render classes with a
 import { bemModule } from '@jahed/bem'
 import styles from 'styles.module.css'
 
-cont bem = bemModule(styles)
+const bem = bemModule(styles)
 
 const className = bem('MyElement', {
   color: 'red',
